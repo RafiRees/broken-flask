@@ -1,0 +1,10 @@
+pandas
+openpyxl
+flask
+flask-sqlalchemy
+flask-wtf
+flask-login
+dash
+dash_bootstrap_components
+plotly
+datapackage
