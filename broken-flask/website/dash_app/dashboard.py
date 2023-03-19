@@ -1,14 +1,15 @@
-from dash import Dash, html, dcc
-import dash_bootstrap_components as dbc
-from dash.dependencies import Input, Output
-import plotly.express as px
-import pandas as pd
-import datapackage
 import os
-import numpy as np
-import pickle
-import plotly.graph_objects as go
+
+from dash import Dash, html, dcc
+from dash.dependencies import Input, Output
+import dash_bootstrap_components as dbc
+import datapackage
 from flask import Flask
+import numpy as np
+import pandas as pd
+import pickle
+import plotly.express as px
+import plotly.graph_objects as go
 
 
 # Create the dash app
