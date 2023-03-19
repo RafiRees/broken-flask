@@ -1,4 +1,8 @@
 __pycache__/
 
-.pyc
-.pkl
+*.pyc
+*.pkl
+
+build/
+dist/
+
