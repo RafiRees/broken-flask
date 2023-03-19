@@ -1,22 +1,21 @@
+from .. import app
+
 import os
 
 from dash import Dash, html, dcc
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import datapackage
-from flask import Flask
 import numpy as np
 import pandas as pd
 import pickle
 import plotly.express as px
 import plotly.graph_objects as go
 
-
 # Create the dash app
-server = Flask(__name__)
 app_dash = Dash(
     # Set the current module name
-    __name__, server = server, url_base_pathname='/dash_app/',
+    __name__, server = app, url_base_pathname='/',
     # Include the bootstrap CSS stylesheet
     external_stylesheets=[dbc.themes.BOOTSTRAP],
     # Include meta tags in the HTML head
