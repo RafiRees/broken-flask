@@ -14,6 +14,7 @@ from dash import Dash
 
 def create_app():
     app.config['SECRET_KEY'] = 'rafis app'
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 

@@ -15,7 +15,7 @@ import plotly.graph_objects as go
 # Create the dash app
 app_dash = Dash(
     # Set the current module name
-    __name__, server = app, url_base_pathname='/',
+    __name__, server = app, url_base_pathname='/dash/',
     # Include the bootstrap CSS stylesheet
     external_stylesheets=[dbc.themes.BOOTSTRAP],
     # Include meta tags in the HTML head
@@ -449,9 +449,9 @@ app_layout = html.Div(
 )
 
 def init_dash(server):
-    dash_app = Dash(server=server, routes_pathname_prefix="/oil/",)
-    dash_app.layout = app_layout
-    return dash_app.server
+    app_dash = Dash(server=server, routes_pathname_prefix="/dash/")
+    app_dash.layout = app_layout
+    return app_dash.server
 
 if __name__ == '__main__':
     app_dash.run_server(debug=True)
